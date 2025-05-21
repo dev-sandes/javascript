@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigração</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificação de Estrangeiros</h1>
+    Digite sua nacionalidade: <input type="text" name="txtes" id="txtes">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div class="res">
+
+    </div>
+    <script>
+        function verificar(){
+            var res = document.querySelector('div.res')
+            var txtes = document.querySelector('input#txtes')
+            var nac = txtes.value.toLowerCase()
+            if (nac == 'brasileiro') {
+                res.innerHTML = `Cidadão`
+            } else {
+                res.innerHTML = `Estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
